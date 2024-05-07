@@ -18,6 +18,8 @@ runs = [rainbow, gated, vanilla, anthropic]
 dfs = [run.history(samples=16_000) for run in runs]
 
 # %%
+log = False
+
 # get training dynamics
 o_df = pd.concat(dfs, keys=["rainbow", "gated", "vanilla", "anthropic"])
 o_df["type"] = o_df.index.get_level_values(0)
@@ -33,11 +35,11 @@ df = pd.concat([df[col_map(i).keys()].rename(columns=col_map(i)) for i in range(
 df['sparsity'] = df.index.get_level_values(0)
 
 # %%
-px.line(df, x="l0", y="patch", color="sparsity", symbol="type", markers=True, title="Training Dynamics", log_x=True, log_y=True).update_layout(title_x=0.5)
+px.line(df, x="l0", y="patch", color="sparsity", symbol="type", markers=True, title="Training Dynamics", log_x=log, log_y=log).update_layout(title_x=0.5)
 # %%
 
 df_last_epoch = df.groupby(['type', 'sparsity']).last().reset_index()
 # df_last_epoch
-px.line(df_last_epoch, x="l0", y="patch", color="type",markers=True, title="Pareto Frontiers", log_x=True, log_y=True).update_layout(title_x=0.5)
+px.line(df_last_epoch, x="l0", y="patch", color="type",markers=True, title="Pareto Frontiers", log_x=log, log_y=log).update_layout(title_x=0.5)
 
 # %%
