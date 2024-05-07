@@ -20,6 +20,7 @@ class ConstrainedAdam(torch.optim.Adam):
     def __init__(self, params, constrained_params, lr):
         super().__init__(params, lr=lr)
         self.constrained_params = list(constrained_params)
+    
     def step(self, closure=None):
         with torch.no_grad():
             for p in self.constrained_params:
@@ -47,7 +48,7 @@ class Sampler:
         self.batches = []
 
     def collect(self):
-        result = rearrange(torch.cat(self.batches, dim=0), "... d_model -> (...) d_model")
+        result = rearrange(torch.stack(self.batches, dim=0)[..., self.config.strip_first_n:, :], "... d_model -> (...) d_model")
         self.batches = []
         return result
 

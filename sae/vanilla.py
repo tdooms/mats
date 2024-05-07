@@ -2,8 +2,8 @@ import torch
 from torch import nn
 from einops import *
 
-from sae.base import BaseSAE, Loss
-from sae.utils import ConstrainedAdam
+from base import BaseSAE, Loss
+from utils import ConstrainedAdam
 
 
 class VanillaSAE(BaseSAE):

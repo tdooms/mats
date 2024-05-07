@@ -1,0 +1,24 @@
+
+
+
+100%|██████████| 2/2 [00:18<00:00,  9.41s/it]
+  0%|          | 0/60 [00:00<?, ?it/s]
+baseline losses: tensor([[7.3115e+00, 8.8975e+00, 1.6567e+00,  ..., 5.2596e+00, 5.9273e+00,
+         4.2908e+00],
+        [9.9649e+00, 6.7802e+00, 1.6147e-01,  ..., 4.5683e+00, 9.0748e-02,
+         9.1485e+00],
+        [8.4435e+00, 3.9849e+00, 1.7384e+00,  ..., 3.9146e+00, 1.2526e+01,
+         5.8519e-01],
+        ...,
+        [4.3290e+00, 7.7813e+00, 5.4776e+00,  ..., 7.9159e-04, 1.7399e-03,
+         2.4620e+00],
+        [5.4329e+00, 6.5804e+00, 1.4544e+01,  ..., 2.6775e+00, 5.4587e-01,
+         2.8111e+00],
+        [1.1448e+01, 6.9809e+00, 1.9974e+00,  ..., 1.8547e+00, 4.5294e+00,
+         5.4142e-03]], device='cuda:0')
+losses: tensor([12.9722, 12.9722, 12.9722, 12.9722, 12.9722, 12.9722, 12.9722, 12.9722],
+
+  0%|          | 0/60 [00:20<?, ?it/s]
+{"AnthropicSAE": "type", "Config": "type", "EinopsError": "type", "GatedSAE": "type", "HookedTransformer": "type", "RainbowSAE": "type", "Sampler": "type", "VanillaSAE": "type", "asnumpy": "function", "config": "Config", "einsum": "function", "get_ipython": "function", "get_splits": "function", "model": "HookedTransformer", "os": "module", "pack": "function", "parse_shape": "function", "px": "module", "rearrange": "function", "reduce": "function", "repeat": "function", "sae": "RainbowSAE", "sampler": "Sampler", "torch": "module", "train": "IterableDataset", "unpack": "function", "validation": "Tensor"}
+{"AnthropicSAE": "type", "Config": "type", "EinopsError": "type", "GatedSAE": "type", "HookedTransformer": "type", "RainbowSAE": "type", "Sampler": "type", "VanillaSAE": "type", "asnumpy": "function", "config": "Config", "einsum": "function", "get_ipython": "function", "get_splits": "function", "model": "HookedTransformer", "os": "module", "pack": "function", "parse_shape": "function", "px": "module", "rearrange": "function", "reduce": "function", "repeat": "function", "sae": "RainbowSAE", "sampler": "Sampler", "torch": "module", "train": "IterableDataset", "unpack": "function", "validation": "Tensor"}
+{"AnthropicSAE": "type", "Config": "type", "EinopsError": "type", "GatedSAE": "type", "HookedTransformer": "type", "RainbowSAE": "type", "Sampler": "type", "VanillaSAE": "type", "asnumpy": "function", "config": "Config", "einsum": "function", "get_ipython": "function", "get_splits": "function", "model": "HookedTransformer", "os": "module", "pack": "function", "parse_shape": "function", "px": "module", "rearrange": "function", "reduce": "function", "repeat": "function", "sae": "RainbowSAE", "sampler": "Sampler", "torch": "module", "train": "IterableDataset", "unpack": "function", "validation": "Tensor"}
