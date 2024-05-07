@@ -2,8 +2,8 @@ import torch
 from torch import nn
 from einops import *
 
-from sae.utils import ConstrainedAdam
-from sae.base import BaseSAE, Loss
+from utils import ConstrainedAdam
+from base import BaseSAE, Loss
 
 class GatedSAE(BaseSAE):
     def __init__(self, config, model):
