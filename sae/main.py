@@ -7,15 +7,15 @@ import plotly.express as px
 import torch
 from einops import *
 
-from base import Config
-from utils import get_splits, Sampler
-from anthropic import AnthropicSAE
-from vanilla import VanillaSAE
-from gated import GatedSAE
-from rainbow import RainbowSAE
+# from base import Config
+# from utils import get_splits, Sampler
+# from anthropic import AnthropicSAE
+# from vanilla import VanillaSAE
+# from gated import GatedSAE
+# from rainbow import RainbowSAE
 # %%
 model = HookedTransformer.from_pretrained("gelu-1l").cuda()
-train, validation = get_splits()
+# train, validation = get_splits()
 
 # %%
 

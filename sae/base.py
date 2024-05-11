@@ -97,7 +97,7 @@ class BaseSAE(nn.Module):
 
     def preprocess_acts(self, x):
         if self.config.whiten:
-            return einsum(x-self.mean, self.inv_sqrt_cov, "... d_model1, d_model1 d_model2 -> ... d_model2")
+            return einsum(x - self.mean, self.inv_sqrt_cov, "... d_model1, d_model1 d_model2 -> ... d_model2")
         else:
             return x
 
@@ -133,10 +133,8 @@ class BaseSAE(nn.Module):
         scheduler = LambdaLR(self.optimizer, lr_lambda=lambda t: min(5*(1 - t/steps), 1.0))
 
         for buffer, _ in tqdm(zip(sampler.sample(), range(self.config.n_buffers)), total=self.config.n_buffers):
-
             loader = DataLoader(buffer, batch_size=self.config.out_batch, shuffle=True, drop_last=True)
             for x in loader:
-                
                 x = self.preprocess_acts(x)
                 x = repeat(x, "... d -> ... inst d", inst=self.n_instances)
                 x_hid, *rest = self.encode(x)

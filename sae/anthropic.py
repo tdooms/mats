@@ -12,7 +12,7 @@ class AnthropicSAE(BaseSAE):
         device = config.device
 
         W_dec = torch.randn(self.n_instances, self.d_hidden, self.d_model, device=device)
-        W_dec /= torch.norm(W_dec, dim=-1, keepdim=True) * 10
+        W_dec /= torch.norm(W_dec, dim=-1, keepdim=True)
         self.W_dec = nn.Parameter(W_dec)
 
         W_enc = W_dec.mT.clone().to(device)
